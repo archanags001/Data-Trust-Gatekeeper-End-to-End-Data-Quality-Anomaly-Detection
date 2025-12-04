@@ -54,3 +54,46 @@ The pipeline includes:
 - **ML Anomaly Detection:** Flags unusual behaviors or potential fraud in applications and transactions.  
 - **Dashboards:** Provides clear metrics for Data Engineering and leadership.  
 
+
+## Project Structure: `data_trust_gatekeeper`
+
+data_trust_gatekeeper/
+│
+├── Data_Simulation_and_Ingestion.ipynb
+├── Data_Governance_Pipeline/
+│ └── Data_Governance_DLT_V0.py (Implements the Bronze → Silver → Gold DLT pipeline)
+├── ML_Anomaly_Detection_pipeline/
+│ └── ML_Anomaly_Detection.py (Applies simplified ML rules to detect anomalies in applications and transactions.)
+│ 
+│
+└── Data_Trust_Gatekeeper_Dashboard.ipynb
+
+## How to Run
+
+1. **Setup Workspace**
+   - Create a folder in your Databricks workspace for the project.
+
+2. **Upload Notebooks**
+   - Upload the following notebooks to the folder:
+     - `Data_Simulation_and_Ingestion.ipynb`
+     - `Data_Trust_Gatekeeper_Dashboard.ipynb`
+
+3. **Run Data Simulation**
+   - Execute the entire `Data_Simulation_and_Ingestion.ipynb`.
+   - **Note:** This may take a few minutes as it generates simulated datasets.
+
+4. **Create and Run ETL Pipelines** Creating ETL pipelines automates the end-to-end data processing, ensuring consistent ingestion, validation, and anomaly detection in production.
+   1. Navigate to your main folder in Databricks.
+   2. Click **Create → ETL Pipeline**.
+   3. Select an empty file and the folder , then give your pipeline a name.
+   4. **Import and run the first pipeline:then in pipeline settings go to Advanced → select Log Publish (similar to the image below), and run the first pipeline:**
+      - `Data_Governance_DLT_V0.py`
+      - <img width="524" height="345" alt="image" src="https://github.com/user-attachments/assets/c927f926-a651-43ec-b108-9620b596d1f2" />
+
+   5. **Import and run the second pipeline:**
+      - `ML_Anomaly_Detection.py`
+      - **Ensure the `Data_Governance_DLT_V0` pipeline completes successfully before running this pipeline.**
+
+5. **Run the Dashboard**
+   - Once both pipelines are completed, open and run `Data_Trust_Gatekeeper_Dashboard.ipynb` to visualize the KPIs, anomalies, and data governance metrics.
+
