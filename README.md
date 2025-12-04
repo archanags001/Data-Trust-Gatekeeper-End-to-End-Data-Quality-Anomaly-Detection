@@ -86,7 +86,7 @@ data_trust_gatekeeper/
    1. Navigate to your main folder in Databricks.
    2. Click **Create → ETL Pipeline**.
    3. Select an empty file and the folder , then give your pipeline a name.
-   4. **Import and run the first pipeline:then in pipeline settings go to Advanced → select Log Publish (similar to the image below), and run the first pipeline:**
+   4. **Import and run the first pipeline:then in pipeline settings go to Advanced settings → select Edit Advanced settings then -- choose similar to the image below --save, and run the first pipeline:**
       - `Data_Governance_DLT_V0.py`
       - <img width="524" height="345" alt="image" src="https://github.com/user-attachments/assets/c927f926-a651-43ec-b108-9620b596d1f2" />
 
