@@ -56,7 +56,7 @@ The pipeline includes:
 
 
 ## Project Structure: `data_trust_gatekeeper`
-
+```
 data_trust_gatekeeper/
 │
 ├── Data_Simulation_and_Ingestion.ipynb
@@ -67,6 +67,8 @@ data_trust_gatekeeper/
 │ 
 │
 └── Data_Trust_Gatekeeper_Dashboard.ipynb
+
+```
 
 ## How to Run
 
